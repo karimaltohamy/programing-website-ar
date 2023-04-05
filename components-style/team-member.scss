@@ -1,0 +1,136 @@
+$main-bg: #1b1f2b;
+$secound-color: #0f1425;
+$third-color: #674df3;
+$main-color: #30f0b6;
+$gray-color: #838694;
+
+// start team-member
+.team-member {
+  padding: 60px 0;
+
+  .container {
+    .subtitle {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 15px;
+      display: block;
+      color: $third-color;
+      text-align: center;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .boxs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+
+      .box {
+        text-align: center;
+        padding: 20px 35px;
+        background-color: #f6f6f6;
+        border-radius: 15px;
+        transition: all 0.3s;
+
+        &:hover {
+          box-shadow: 2px 1px 11px 4px #674df329;
+        }
+
+        img {
+          width: 180px;
+          margin-bottom: 30px;
+          border-radius: 50%;
+        }
+
+        .text {
+          padding-bottom: 20px;
+          border-bottom: 1px solid gainsboro;
+
+          .title-box {
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 5px;
+          }
+
+          .job-title {
+            color: gray;
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+
+        .social {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          padding-top: 20px;
+
+          a {
+            i {
+              color: $third-color;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .team-member {
+    padding: 30px 0;
+
+    .container {
+      .subtitle {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      .title {
+        font-size: 22px;
+      }
+
+      .boxs {
+        .box {
+          padding: 14px 25px;
+
+          img {
+            width: 130px;
+            margin-bottom: 15px;
+          }
+
+          .text {
+            padding-bottom: 10px;
+
+            .title-box {
+              font-size: 17px;
+              margin-bottom: 0;
+            }
+
+            .job-title {
+              font-size: 13px;
+            }
+          }
+
+          .social {
+            padding-top: 10px;
+
+            a {
+              i {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end team-member

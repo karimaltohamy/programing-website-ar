@@ -1,0 +1,328 @@
+$main-bg: #1b1f2b;
+$secound-color: #0f1425;
+$third-color: #674df3;
+$main-color: #30f0b6;
+$gray-color: #838694;
+
+// start working-process
+.working-process {
+  padding: 60px 0;
+
+  .container {
+    .subtitle {
+      color: $third-color;
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-align: center;
+      display: block;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .boxs {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      background-image: url("../images/work-process-line.png");
+      background-position: top;
+      background-repeat: no-repeat;
+
+      .box {
+        cursor: pointer;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+          transform: translateY(-25px);
+        }
+
+        .circle {
+          width: 80px;
+          height: 80px;
+          box-shadow: 0px 10px 60px 0px rgba(102, 83, 232, 0.25);
+          margin-bottom: 30px;
+          background-color: white;
+          margin-left: 30px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s;
+
+          span {
+            background-color: $third-color;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 22px;
+          }
+        }
+
+        .text {
+          padding: 35px 25px 35px 25px;
+          transition: all 0.4s;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -19px;
+            left: 20px;
+            border: 10px solid white;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            transition: all 0.4s;
+          }
+
+          h5 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+          }
+
+          p {
+            font-weight: 400;
+            line-height: 1.7;
+            color: $gray-color;
+            margin: 0;
+          }
+        }
+
+        &:hover {
+          .circle {
+            span {
+              background-color: $main-color;
+            }
+          }
+
+          .text {
+            background-color: $third-color;
+            color: white;
+
+            &::before {
+              border: 10px solid $third-color;
+              border-right-color: transparent;
+              border-top-color: transparent;
+            }
+
+            p {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .working-process {
+    padding: 30px 0;
+
+    .container {
+      .subtitle {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+
+      .title {
+        font-size: 23px;
+      }
+
+      .boxs {
+        text-align: center;
+
+        .box {
+          .circle {
+            margin: auto;
+            width: 65px;
+            height: 65px;
+
+            span {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          .text {
+            padding: 15px 20px;
+
+            h5 {
+              font-size: 18px;
+              margin-bottom: 5px;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 1.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end working-process
+
+// start guaranteed-customer
+.guaranteed-customer {
+  padding: 60px 0;
+
+  .container {
+    .left {
+      .subtitle {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: $third-color;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 35px;
+        margin-bottom: 50px;
+      }
+
+      .desc {
+        color: $gray-color;
+        line-height: 1.5;
+        margin-bottom: 50px;
+        font-size: 17px;
+      }
+
+      .mini-boxs {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .mini-box {
+          padding: 40px 40px 40px 40px;
+          box-shadow: 0px 10px 60px 0px
+            rgba(103.00000000000003, 77.00000000000001, 242.99999999999997, 0.2);
+
+          img {
+            width: 65px;
+            margin-bottom: 15px;
+          }
+
+          h4 {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+
+      .image {
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .box-populate {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 60px;
+        background-color: #30f0b6;
+        padding: 30px;
+        width: 250px;
+        text-align: center;
+
+        h2 {
+          font-size: 28px;
+          font-weight: 600;
+        }
+
+        img {
+          width: 190px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .guaranteed-customer {
+    padding: 30px 0;
+
+    .container {
+      .left {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .guaranteed-customer {
+    .container {
+      text-align: center;
+
+      .left {
+        .subtitle {
+          font-size: 15px;
+        }
+
+        .title {
+          font-size: 22px;
+          margin-bottom: 15px;
+        }
+
+        .desc {
+          font-size: 14px;
+        }
+
+        .mini-boxs {
+          flex-direction: column;
+          gap: 15px;
+
+          .mini-box {
+            padding: 20px;
+
+            img {
+              width: 55px;
+              margin-bottom: 5px;
+            }
+
+            h4 {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+
+      .right {
+        .box-populate {
+          padding: 15px;
+          top: auto;
+          transform: translateY(0);
+          bottom: 10px;
+          right: 20px;
+
+          h2 {
+            font-size: 17px;
+          }
+
+          img {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+// end guaranteed-customer

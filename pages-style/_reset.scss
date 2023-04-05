@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+$secound-color: #0f1425;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.page-title-warpper {
+  background-image: url(https://demo.webtend.net/wp/jeena/wp-content/uploads/2023/01/page-title-min.jpg);
+  background-color: $secound-color;
+  height: 300px;
+  color: white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 31, 43, 0.65);
+  }
+
+  .container {
+    height: 100%;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      z-index: 4;
+
+      h2 {
+        font-size: 45px;
+        font-weight: 600;
+      }
+
+      .path {
+        a {
+          font-size: 18px;
+          margin-right: 8px;
+
+          &:last-child {
+            text-decoration: underline !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .page-title-warpper {
+    height: 200px;
+
+    .container {
+      .content {
+        h2 {
+          font-size: 25px;
+        }
+
+        .path {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

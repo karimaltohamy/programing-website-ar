@@ -1,0 +1,97 @@
+$main-bg: #1b1f2b;
+$secound-color: #0f1425;
+$third-color: #674df3;
+$main-color: #30f0b6;
+$gray-color: #838694;
+
+// start company-statistics
+.company-statistics {
+  padding: 60px 0;
+  background-color: $third-color;
+  color: white;
+
+  .container {
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 35px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .boxs {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+
+      .box {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .company-statistics {
+    padding: 30px 0;
+
+    .container {
+      .subtitle {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 22px;
+      }
+
+      .boxs {
+        margin-top: 25px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+        .box {
+          .image {
+            width: 70px;
+            height: 70px;
+
+            img {
+              width: 65%;
+            }
+          }
+
+          .text {
+            h1 {
+              font-size: 25px;
+              margin-bottom: 0;
+            }
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end company-statistics
